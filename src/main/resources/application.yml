@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    name: datasource
+    url: jdbc:mysql://dev.local:3306/demo?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: yV2jJxvNs8BD
