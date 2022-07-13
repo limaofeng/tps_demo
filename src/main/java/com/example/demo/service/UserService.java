@@ -28,7 +28,7 @@ public class UserService {
     public void saveAll(List<Cargo<User, User>> cargos) {
         List<User> users = cargos.stream().map(Cargo::getContent).collect(Collectors.toList());
 
-        this.userDao.saveAll(users);
+        this.userDao.saveInBatch(users);
 
         for (Cargo<User, User> cargo : cargos) {
             User user = cargo.getContent();

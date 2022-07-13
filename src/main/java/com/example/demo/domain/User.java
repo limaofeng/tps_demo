@@ -20,8 +20,7 @@ import java.util.Date;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", nullable = false, updatable = false, precision = 22)
+    @Column(name = "ID", nullable = false, updatable = false)
     private Long id;
 
     @Column(name = "NICKNAME", length = 30)
