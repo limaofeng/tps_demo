@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.concurrent.CompletableFuture;
 
 @Slf4j
@@ -35,5 +36,11 @@ public class UserController {
     @ResponseBody
     public CompletableFuture<User> addUser(@RequestBody User user) {
         return this.batchSaveService.submit(user);
+    }
+
+    @PostMapping("/algorithms/id/infer")
+    @ResponseBody
+    public CompletableFuture<User> infer(HttpServletRequest request, @RequestBody MessageBody body) {
+        return this.batchSaveService.submit(User.builder().nickname("11").username("xxxx").password("xxxx").build());
     }
 }

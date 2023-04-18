@@ -8,6 +8,8 @@ spring:
         order_inserts: true
         order_updates: true
         generate_statistics: false
+    hibernate:
+      ddl-auto: update
   datasource:
     name: datasource
     url: jdbc:mysql://dev.local:3306/demo?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
